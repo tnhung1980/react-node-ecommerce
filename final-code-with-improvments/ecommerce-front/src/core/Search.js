@@ -13,6 +13,8 @@ const Search = () => {
 
     const { categories, category, search, results, searched } = data;
 
+    console.log(data);
+
     const loadCategories = () => {
         getCategories().then(data => {
             if (data.error) {
