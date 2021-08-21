@@ -5,8 +5,8 @@ import { signin, authenticate, isAuthenticated } from "../auth";
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: "ryan@gmail.com",
-        password: "rrrrrr9",
+        email: "test@gmail.com",
+        password: "test1234",
         error: "",
         loading: false,
         redirectToReferrer: false
@@ -83,6 +83,7 @@ const Signin = () => {
     const redirectUser = () => {
         if (redirectToReferrer) {
             if (user && user.role === 1) {
+                console.log('User role', user.role)
                 return <Redirect to="/admin/dashboard" />;
             } else {
                 return <Redirect to="/user/dashboard" />;
